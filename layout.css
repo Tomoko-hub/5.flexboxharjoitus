@@ -1,0 +1,104 @@
+body {
+    font-family : "Gotham", Helvetica, Arial, sans-serif;
+    background-color: darkcyan;
+    padding: 10px; 
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.wrapper > *{
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+.header {
+    background-color: gold;
+}
+.numbers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: lightgray;
+    text-align: center;
+}
+.numbers > *{
+    flex-basis: 0;
+    flex-grow: 1;
+    border: solid black 1px;
+    padding: 10px;
+}
+.wrapper .numbers {
+    padding: 0;
+}
+.main {
+    background-color: darkorange;
+    flex-basis: 400px;
+}
+.somenav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0rem;
+
+}
+.somenav > * {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding : 10px;
+    flex-direction: row;
+    text-align: center;
+    font-size: 2rem;
+    border: solid black 1px
+}
+.face {
+    background-color: darkblue;
+}
+.twitter {
+    background-color: cornflowerblue;
+}
+.mail {
+    background-color: gray;
+}
+
+.aside-1 {
+    background-color: mediumseagreen;
+}
+.aside-2 {
+    background-color: seagreen;
+}
+.footer {
+    background-color: lightgreen;
+}
+
+/**/
+@media screen and (min-width: 426px){
+    .wrapper {
+        flex-direction: row;
+    }
+    .aside-1 {
+        flex-basis: auto;
+    }
+    .aside-2 {
+        flex-basis: auto;
+    }
+}
+
+@media screen and (min-width:769px){
+    .aside-1 {
+        order: 1;
+        flex-basis: 0px;
+    }
+    .main {
+        order: 2;
+        flex-basis: 400px;
+    }
+    .aside-2 {
+        order: 3;
+        flex-basis: 0px;
+    }
+    .footer {
+        order: 4;
+    }
+}
